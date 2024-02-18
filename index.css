@@ -1,0 +1,108 @@
+.smooth {
+  transition: all 0.2s ease-in-out;
+}
+
+.bgImg1 {
+  background-image: linear-gradient(
+    to right,
+    rgb(126, 118, 255, 1),
+    rgb(136, 242, 255, 1)
+  );
+}
+.borderRad1 {
+  border-radius: 0rem;
+}
+
+.cstmWidth {
+  width: 100%;
+  padding: 0;
+}
+.cstmHeight1 {
+  height: auto;
+}
+
+.navLink {
+  display: block;
+  color: white;
+  font-size: 14px;
+}
+.navLink:hover {
+  color: white;
+  background-color: black;
+}
+
+.introPicCol {
+  position: absolute;
+  left: 0px;
+  top: -20rem;
+}
+.introTextCol {
+  position: absolute;
+  top: 15rem;
+}
+
+/* > sm */
+@media (min-width: 576px) {
+  .cstmWidth {
+    width: 100%;
+    padding: 0;
+  }
+  .cstmHeight1 {
+    height: auto;
+  }
+  .borderRad1 {
+    border-radius: 0rem;
+  }
+  .introPicCol {
+    position: static;
+  }
+  .introTextCol {
+    position: static;
+  }
+}
+
+/* > md */
+@media (min-width: 768px) {
+  .cstmWidth {
+    width: 100%;
+    padding: 0 5% 0 5%;
+  }
+
+  .cstmHeight1 {
+    height: 75vh;
+    min-height: 75vh;
+  }
+  .introPicCol {
+    position: static;
+  }
+  .introTextCol {
+    position: static;
+  }
+  .borderRad1 {
+    border-radius: 20rem;
+  }
+}
+
+/* > lg */
+@media (min-width: 992px) {
+  .cstmWidth {
+    width: 100%;
+    padding: 0 10% 0 10%;
+  }
+  .cstmHeight1 {
+    height: 75vh;
+    min-height: 75vh;
+  }
+}
+
+/* > xl */
+@media (min-width: 1200px) {
+  .cstmWidth {
+    width: 100%;
+    padding: 0 15% 0 15%;
+  }
+  .cstmHeight1 {
+    height: 75vh;
+    min-height: 75vh;
+  }
+}
