@@ -1,14 +1,45 @@
-.smooth {
+* {
   transition: all 0.2s ease-in-out;
+}
+.skillImgSize {
+  width: 40%;
+}
+.skill {
+  height: 100px;
+}
+
+.skill > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0;
+}
+
+.skill > div:hover {
+  box-shadow: 0.1rem 0.1rem 0.5rem white;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .bgImg1 {
   background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(251, 251, 251, 1) 100%
+    ),
+    linear-gradient(0deg, #d1caa7, #04adfc);
+  /* background-image: linear-gradient(
+    to right,
+    rgb(53, 13, 63),
+    rgb(15, 176, 179)
+  ); */
+  /* background-image: linear-gradient(
     to right,
     rgb(126, 118, 255, 1),
     rgb(136, 242, 255, 1)
-  );
+  ); */
 }
+
 .borderRad1 {
   border-radius: 0rem;
 }
@@ -24,7 +55,7 @@
 .navLink {
   display: block;
   color: white;
-  font-size: 14px;
+  font-size: 12px;
 }
 .navLink:hover {
   color: white;
@@ -43,6 +74,12 @@
 
 /* > sm */
 @media (min-width: 576px) {
+  .skill {
+    height: 120px;
+  }
+  .skillImgSize {
+    width: 75%;
+  }
   .cstmWidth {
     width: 100%;
     padding: 0;
@@ -63,6 +100,15 @@
 
 /* > md */
 @media (min-width: 768px) {
+  .skill {
+    height: 150px;
+  }
+  .skillImgSize {
+    width: 80%;
+  }
+  .navLink {
+    font-size: 14px;
+  }
   .cstmWidth {
     width: 100%;
     padding: 0 5% 0 5%;
@@ -85,6 +131,9 @@
 
 /* > lg */
 @media (min-width: 992px) {
+  .navLink {
+    font-size: 14px;
+  }
   .cstmWidth {
     width: 100%;
     padding: 0 10% 0 10%;
@@ -97,6 +146,9 @@
 
 /* > xl */
 @media (min-width: 1200px) {
+  .navLink {
+    font-size: 14px;
+  }
   .cstmWidth {
     width: 100%;
     padding: 0 15% 0 15%;
