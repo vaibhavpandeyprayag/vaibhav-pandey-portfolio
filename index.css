@@ -22,12 +22,38 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
+.designation {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.accordion-button::after {
+  background-image: none !important;
+}
+
 .bgImg1 {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1) 0%,
       rgba(251, 251, 251, 1) 100%
     ),
-    linear-gradient(0deg, #d1caa7, #04adfc);
+    linear-gradient(0deg, #ffffff, #04adfc);
+  /* background-image: linear-gradient(
+    to right,
+    rgb(53, 13, 63),
+    rgb(15, 176, 179)
+  ); */
+  /* background-image: linear-gradient(
+    to right,
+    rgb(126, 118, 255, 1),
+    rgb(136, 242, 255, 1)
+  ); */
+}
+.bgImg2 {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.1) 100%,
+      rgba(251, 251, 251, 1) 0%
+    ),
+    linear-gradient(180deg, #ffffff, #04adfc);
   /* background-image: linear-gradient(
     to right,
     rgb(53, 13, 63),
