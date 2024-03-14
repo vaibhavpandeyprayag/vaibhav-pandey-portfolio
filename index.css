@@ -22,15 +22,6 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.designation {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.accordion-button::after {
-  background-image: none !important;
-}
-
 .bgImg1 {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1) 0%,
