@@ -22,6 +22,24 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
+.education {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.educationImg {
+  width: 4rem;
+  margin: auto;
+}
+
+.educationConnectLine {
+  flex-grow: 1;
+  height: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-start-start-radius: 1rem;
+  border-end-start-radius: 1rem;
+  border-right-color: rgba(255, 255, 255, 0.4);
+}
+
 .bgImg1 {
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.1) 0%,
