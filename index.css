@@ -108,6 +108,14 @@
 }
 
 .sideMenuLink {
+  background-color:rgb(33, 37, 41);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  transition: all 0.5s fade-in-out;
+}
+.sideMenuLink:hover {
+  border-left: 0.5rem solid white;
   background-color: black;
 }
 
