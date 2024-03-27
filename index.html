@@ -19,7 +19,10 @@
           class="position-relative col-12 col-lg-3 d-flex mb-2 mb-md-0 justify-content-center justify-content-lg-start align-items-center smooth p-0"
         >
           <a
-            href="javascript:void(0)"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
             class="position-absolute start-0 d-block d-lg-none"
           >
             <svg
@@ -42,7 +45,7 @@
           <div class="row justify-content-between justify-content-md-end m-0">
             <div class="col-auto smooth p-0">
               <a
-                href="javascript:void(0)"
+                href="#intro"
                 class="navLink smooth rounded-1 p-2 fw-bold text-decoration-none"
               >
                 intro
@@ -50,7 +53,7 @@
             </div>
             <div class="col-auto smooth p-0">
               <a
-                href="javascript:void(0)"
+                href="#skills"
                 class="navLink smooth rounded-1 p-2 fw-bold text-decoration-none"
               >
                 skills
@@ -58,7 +61,7 @@
             </div>
             <div class="col-auto smooth p-0">
               <a
-                href="javascript:void(0)"
+                href="#experience"
                 class="navLink smooth rounded-1 p-2 fw-bold text-decoration-none"
               >
                 experience
@@ -66,23 +69,23 @@
             </div>
             <div class="col-auto smooth p-0">
               <a
-                href="javascript:void(0)"
+                href="#education"
                 class="navLink smooth rounded-1 p-2 fw-bold text-decoration-none"
               >
                 education
               </a>
             </div>
-            <div class="col-auto smooth p-0">
+            <!-- <div class="col-auto smooth p-0">
               <a
-                href="javascript:void(0)"
+                href="#project"
                 class="navLink smooth rounded-1 p-2 fw-bold text-decoration-none"
               >
                 projects
               </a>
-            </div>
+            </div> -->
             <div class="col-auto smooth p-0">
               <a
-                href="javascript:void(0)"
+                href="#contact"
                 class="navLink smooth rounded-1 p-2 fw-bold text-decoration-none"
               >
                 contact
@@ -94,7 +97,7 @@
     </div>
     <div class="bgImg1" style="min-height: 75vh"></div>
     <div class="position-absolute" style="top: 15rem">
-      <div class="cstmWidth">
+      <div id="intro" class="cstmWidth">
         <div class="cstmHeight1 card border-0 shadow-lg">
           <div class="card-body cstmHeight1">
             <div class="row h-100 gap-5 gap-md-0">
@@ -208,7 +211,8 @@
           </div>
         </div>
       </div>
-      <div class="cstmWidth">
+      <div class="cstmWidth position-relative">
+        <label id="skills" class="position-absolute" style="top: -2rem"></label>
         <div class="bgImg1 card mt-5 border-0 shadow-lg">
           <div class="card-body py-5">
             <div class="col-12 pb-4 text-center">
@@ -276,7 +280,12 @@
           </div>
         </div>
       </div>
-      <div class="bgImg2 py-5">
+      <div class="bgImg2 py-5 position-relative">
+        <label
+          id="experience"
+          class="position-absolute"
+          style="top: -2rem"
+        ></label>
         <div class="cstmWidth">
           <div class="card">
             <div class="card-body pt-5">
@@ -461,7 +470,12 @@
           </div>
         </div>
       </div>
-      <div class="cstmWidth">
+      <div class="cstmWidth position-relative">
+        <label
+          id="education"
+          class="position-absolute"
+          style="top: -2rem"
+        ></label>
         <div class="bgImg2 card mt-5 border-0 shadow-lg">
           <div class="card-body py-5">
             <div class="col-12 pb-4 text-center">
@@ -547,7 +561,12 @@
           </div>
         </div>
       </div>
-      <div class="bg-dark mt-5 py-5">
+      <div class="bg-dark mt-5 py-5 position-relative">
+        <label
+          id="contact"
+          class="position-absolute"
+          style="top: -2rem"
+        ></label>
         <div class="cstmWidth row">
           <div class="col-12 pb-4 text-center">
             <h4 class="fw-bold text-uppercase text-white">contact</h4>
@@ -644,3 +663,30 @@
     <script src="index.js"></script>
   </body>
 </html>
+
+<div
+  class="offcanvas offcanvas-start text-bg-dark"
+  tabindex="-1"
+  id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-uppercase" id="offcanvasExampleLabel">
+      portfolio
+    </h5>
+    <button
+      type="button"
+      class="btn-close btn-close-white"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body mt-5 p-0">
+    <div class="d-flex flex-column gap-2">
+      <a class="sideMenuLink">Intro</a>
+      <a class="sideMenuLink">skills</a>
+      <a class="sideMenuLink"></a>
+      <a class="sideMenuLink"></a>
+    </div>
+  </div>
+</div>
