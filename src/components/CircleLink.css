@@ -6,12 +6,12 @@
   border-radius: 100%;
   width: 64px;
   height: 64px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-4);
   text-decoration: none;
 }
 
 .circle-link:hover {
-  background-color: var(--color-3);
+  background-color: var(--color-2);
 }
 
 .circle-link:hover .link-tip {

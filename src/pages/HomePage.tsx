@@ -37,13 +37,11 @@ const HomePage: FC<Props> = () => {
                 fontSize: `${Math.max(16, winInnerWidth / 80)}px`,
               }}
             >
-              <label className={"color-3-dark letter-space-1"}>
+              <label className={"color-2 letter-space-1"}>
                 Software Engineer
               </label>
-              <label className={"color-3-dark letter-space-1"}>|</label>
-              <label className={"color-3-dark letter-space-1"}>
-                Freelancer
-              </label>
+              <label className={"color-2 letter-space-1"}>|</label>
+              <label className={"color-2 letter-space-1"}>Freelancer</label>
             </section>
           </div>
           <div
