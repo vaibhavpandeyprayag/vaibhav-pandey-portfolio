@@ -1,7 +1,6 @@
-import { memo, useContext, useEffect, useState, type FC } from "react";
+import { memo, useContext, useEffect, type FC } from "react";
 import Navbar from "../components/Navbar";
 import "./HomePage.css";
-import PrimaryBtn from "../components/PrimaryBtn";
 import CircleLink from "../components/CircleLink";
 import LinkedInImg from "../assets/linkedin-icon.png";
 import GitHubImg from "../assets/github-icon.png";
@@ -11,7 +10,7 @@ import { WindowWidthContext } from "../exports";
 
 interface Props {}
 
-const HomePage: FC<Props> = props => {
+const HomePage: FC<Props> = () => {
   const winInnerWidth = useContext(WindowWidthContext);
 
   useEffect(() => {

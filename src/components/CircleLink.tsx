@@ -1,4 +1,4 @@
-import { memo, useEffect } from "react";
+import { memo } from "react";
 import "./CircleLink.css";
 interface Props {
   image: string;
