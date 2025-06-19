@@ -7,6 +7,7 @@
   --color-3: rgb(245, 245, 220);
   --color-3-dark: rgb(255, 203, 134);
   --color-4: rgb(255, 255, 255);
+  --color-5-dark: rgb(180, 180, 180);
 }
 
 * {
@@ -45,6 +46,10 @@
 
 .border-color-2 {
   color: var(--color-2);
+}
+
+.border-color-5-dark {
+  color: var(--color-5-dark);
 }
 
 .border-bottom {

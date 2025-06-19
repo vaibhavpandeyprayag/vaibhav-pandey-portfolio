@@ -1,4 +1,4 @@
-import { memo, useContext, useEffect, type FC } from "react";
+import { memo, useContext, useEffect, useState, type FC } from "react";
 import Navbar from "../components/Navbar";
 import "./HomePage.css";
 import CircleLink from "../components/CircleLink";
@@ -12,10 +12,34 @@ interface Props {}
 
 const HomePage: FC<Props> = () => {
   const winInnerWidth = useContext(WindowWidthContext);
+  const [heroTitle, setHeroTitle] = useState<string>("");
+  const titles = [
+    "Software Engineer",
+    "Fullstack Developer",
+    "Mobile Developer",
+  ];
+
+  const animateTitle = async () => {
+    let i = 0;
+    while (true) {
+      for (let j = 0; j < titles[i].length; j++) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        setHeroTitle(prev => prev + titles[i][j]);
+      }
+      await new Promise(resolve => setTimeout(resolve, 800));
+
+      for (let j = 0; j < titles[i].length; j++) {
+        await new Promise(resolve => setTimeout(resolve, 200));
+        setHeroTitle(prev => prev.slice(0, -1));
+      }
+
+      i = (i + 1) % titles.length;
+    }
+  };
 
   useEffect(() => {
-    console.log("HomePage rendered");
-  });
+    animateTitle();
+  }, []);
   return (
     <div className="home-page">
       <Navbar />
@@ -37,11 +61,8 @@ const HomePage: FC<Props> = () => {
                 fontSize: `${Math.max(16, winInnerWidth / 80)}px`,
               }}
             >
-              <label className={"color-2 letter-space-1"}>
-                Software Engineer
-              </label>
-              <label className={"color-2 letter-space-1"}>|</label>
-              <label className={"color-2 letter-space-1"}>Freelancer</label>
+              <label className={"hero-title letter-space-1"}>{heroTitle}</label>
+              <label className={"cursor"}>|</label>
             </section>
           </div>
           <div
@@ -77,7 +98,41 @@ const HomePage: FC<Props> = () => {
           </div>
           {/* </div> */}
         </div>
-        <div className="skills-section"></div>
+        <div className="skills-section">
+          <div className="skills-container">
+            <div className="skills-header">
+              <a href="javascript:void(0)" className="skill-cat active">
+                Programming Languages
+              </a>
+              <a href="javascript:void(0)" className="skill-cat">
+                Front End
+              </a>
+              <a href="javascript:void(0)" className="skill-cat">
+                Back End
+              </a>
+              <a href="javascript:void(0)" className="skill-cat">
+                Version Control
+              </a>
+              <a href="javascript:void(0)" className="skill-cat">
+                Other
+              </a>
+            </div>
+            <div className="skills-body">
+              <a href="javascript:void(0)" className="skill-item">
+                <img src={""} alt="javascript" />
+                <span>JavaScript</span>
+              </a>
+              <a href="javascript:void(0)" className="skill-item">
+                <img src={""} alt="typescript" />
+                <span>TypeScript</span>
+              </a>
+              <a href="javascript:void(0)" className="skill-item">
+                <img src={""} alt="java" />
+                <span>Java</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
