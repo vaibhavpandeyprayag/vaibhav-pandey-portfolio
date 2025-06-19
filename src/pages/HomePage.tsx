@@ -6,6 +6,9 @@ import LinkedInImg from "../assets/linkedin-icon.png";
 import GitHubImg from "../assets/github-icon.png";
 import XImg from "../assets/x-icon.png";
 import ResumeImg from "../assets/resume-icon.png";
+import JsImg from "../assets/js-icon.png";
+import TsImg from "../assets/ts-icon.png";
+import JavaImg from "../assets/java-icon.png";
 import { WindowWidthContext } from "../exports";
 
 interface Props {}
@@ -99,6 +102,15 @@ const HomePage: FC<Props> = () => {
           {/* </div> */}
         </div>
         <div className="skills-section">
+          <h1
+            className="section-title skills-title"
+            style={{
+              fontSize: `${Math.max(40, winInnerWidth / 20)}px`,
+              marginBottom: "2rem",
+            }}
+          >
+            Skills
+          </h1>
           <div className="skills-container">
             <div className="skills-header">
               <a href="javascript:void(0)" className="skill-cat active">
@@ -119,16 +131,16 @@ const HomePage: FC<Props> = () => {
             </div>
             <div className="skills-body">
               <a href="javascript:void(0)" className="skill-item">
-                <img src={""} alt="javascript" />
-                <span>JavaScript</span>
+                <img className="skill-img" src={JsImg} alt="javascript" />
+                <span className="skill-name">JavaScript</span>
               </a>
               <a href="javascript:void(0)" className="skill-item">
-                <img src={""} alt="typescript" />
-                <span>TypeScript</span>
+                <img className="skill-img" src={TsImg} alt="typescript" />
+                <span className="skill-name">TypeScript</span>
               </a>
               <a href="javascript:void(0)" className="skill-item">
-                <img src={""} alt="java" />
-                <span>Java</span>
+                <img className="skill-img" src={JavaImg} alt="java" />
+                <span className="skill-name">Java</span>
               </a>
             </div>
           </div>
