@@ -11,3 +11,24 @@ https://www.freepik.com/icon/js_5968292#fromView=search&page=1&position=0&uuid=6
 https://www.freepik.com/icon/typescript_5968381#fromView=resource_detail&position=5
 
 https://www.freepik.com/icon/java_5968282#fromView=resource_detail&position=15
+
+https://www.freepik.com/free-vector/star-sparkle-yellow-gradient_92625209.htm#fromView=search&page=1&position=22&uuid=5a618785-3092-4300-b5aa-5edf9995abbd&query=star
+
+
+react icon - already present in the project itself
+
+angular icon - already present in an angular project
+
+react-native icon - taken from navbar of official docs website
+
+node icon - https://github.com/nodejs
+
+spring-boot icon - https://spring.io/projects/spring-boot
+
+postgresql icon - https://www.postgresql.org/
+
+git icon - https://git-scm.com/downloads/logos
+
+data-structure icon - https://www.flaticon.com/free-icon/project-management_14234775?term=data+structure&page=1&position=95&origin=tag&related_id=14234775
+
+algorithms icon - https://www.flaticon.com/free-icon/neural_2103633?term=algorithms&page=1&position=7&origin=search&related_id=2103633

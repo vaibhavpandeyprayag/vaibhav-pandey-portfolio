@@ -1,13 +1,14 @@
-import type { FC } from "react";
+import { useState, type FC } from "react";
 import "./Navbar.css";
 
 interface Props {}
 
 const Navbar: FC<Props> = () => {
+  const [sideBarShow, setSideBarShow] = useState<boolean>(false);
   return (
     <nav className={"navbar-container"}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <a href="javascrpt:void(0)">
+        <a className="menu-icon" href="javascrpt:void(0)">
           <span className="menu-icon-bar"></span>
           <span className="menu-icon-bar"></span>
           <span className="menu-icon-bar"></span>

@@ -1,15 +1,24 @@
 import { memo, useContext, useEffect, useState, type FC } from "react";
-import Navbar from "../components/Navbar";
 import "./HomePage.css";
 import CircleLink from "../components/CircleLink";
 import LinkedInImg from "../assets/linkedin-icon.png";
 import GitHubImg from "../assets/github-icon.png";
 import XImg from "../assets/x-icon.png";
 import ResumeImg from "../assets/resume-icon.png";
+import ReactImg from "../assets/react.svg";
+import AngularImg from "../assets/angular.svg";
+import ReactNativeImg from "../assets/reactnative.svg";
 import JsImg from "../assets/js-icon.png";
 import TsImg from "../assets/ts-icon.png";
 import JavaImg from "../assets/java-icon.png";
+import NodeImg from "../assets/nodejs.png";
+import SpringBootImg from "../assets/spring-boot.svg";
+import PostgreSQLImg from "../assets/postgresql.png";
+import GitImg from "../assets/git.svg";
+import DsImg from "../assets/ds-icon.png";
+import AlgoImg from "../assets/algorithms.png";
 import { WindowWidthContext } from "../exports";
+import SkillItem from "../components/SkillItem";
 
 interface Props {}
 
@@ -20,6 +29,43 @@ const HomePage: FC<Props> = () => {
     "Software Engineer",
     "Fullstack Developer",
     "Mobile Developer",
+  ];
+  const skills = [
+    {
+      name: "Front End",
+      skills_list: [
+        { image: ReactImg, name: "React" },
+        { image: AngularImg, name: "Angular" },
+        { image: ReactNativeImg, name: "React Native" },
+      ],
+    },
+    {
+      name: "Back End",
+      skills_list: [
+        { image: NodeImg, name: "Node.js" },
+        { image: SpringBootImg, name: "Spring Boot" },
+      ],
+    },
+    {
+      name: "Programming Languages",
+      skills_list: [
+        { image: JsImg, name: "JavaScript" },
+        { image: TsImg, name: "TypeScript" },
+        { image: JavaImg, name: "Java" },
+      ],
+    },
+    {
+      name: "Databases",
+      skills_list: [{ image: PostgreSQLImg, name: "PostgreSQL" }],
+    },
+    {
+      name: "Others",
+      skills_list: [
+        { image: GitImg, name: "Git" },
+        { image: DsImg, name: "Data Structures" },
+        { image: AlgoImg, name: "Alogrithms" },
+      ],
+    },
   ];
 
   const animateTitle = async () => {
@@ -45,7 +91,6 @@ const HomePage: FC<Props> = () => {
   }, []);
   return (
     <div className="home-page">
-      <Navbar />
       <div className="home-page-container">
         <div className="hero-section">
           <div>
@@ -101,47 +146,82 @@ const HomePage: FC<Props> = () => {
           </div>
           {/* </div> */}
         </div>
-        <div className="skills-section">
-          <h1
-            className="section-title skills-title"
-            style={{
-              fontSize: `${Math.max(40, winInnerWidth / 20)}px`,
-              marginBottom: "2rem",
-            }}
-          >
-            Skills
-          </h1>
-          <div className="skills-container">
-            <div className="skills-header">
-              <a href="javascript:void(0)" className="skill-cat active">
-                Programming Languages
-              </a>
-              <a href="javascript:void(0)" className="skill-cat">
-                Front End
-              </a>
-              <a href="javascript:void(0)" className="skill-cat">
-                Back End
-              </a>
-              <a href="javascript:void(0)" className="skill-cat">
-                Version Control
-              </a>
-              <a href="javascript:void(0)" className="skill-cat">
-                Other
-              </a>
+        <div className="pro-intro-section">
+          <div className="about-exp-box">
+            <div className="experience-box">
+              <h1 className="experience-text" style={{}}>
+                2.25
+              </h1>
+              <h1
+                className="experience-title"
+                style={{
+                  fontSize: `30px`,
+                }}
+              >
+                YEARS OF EXPERIENCE
+              </h1>
             </div>
+            <div className="about-text">
+              <p
+                style={{
+                  textAlign: "justify",
+                  marginBottom: "3rem",
+                }}
+              >
+                I am a passionate Software Engineer with{" "}
+                <b style={{ color: "var(--color-5)" }}>
+                  <i>over 2 years of experience</i>
+                </b>{" "}
+                in building dynamic and responsive web and mobile applications.
+                I specialize in{" "}
+                <b>
+                  <i>React, Angular, and React Native</i>
+                </b>
+                , with a strong focus on writing clean, maintainable code and
+                delivering pixel-perfect user interfaces.
+              </p>
+              <p
+                style={{
+                  textAlign: "justify",
+                  marginBottom: "3rem",
+                }}
+              >
+                {" "}
+                I enjoy solving real-world problems through code and take pride
+                in creating smooth, user-friendly experiences. Whether it’s
+                developing cross-platform mobile apps or modern web
+                applications, I strive to bring performance, accessibility, and
+                quality to everything I build. I’m always learning, growing, and
+                open to new opportunities and collaborations!
+              </p>
+            </div>
+          </div>
+          <div className="skills-container">
+            <h1
+              className="skills-title"
+              style={{
+                fontSize: `${Math.max(40, winInnerWidth / 25)}px`,
+              }}
+            >
+              Skills
+            </h1>
             <div className="skills-body">
-              <a href="javascript:void(0)" className="skill-item">
-                <img className="skill-img" src={JsImg} alt="javascript" />
-                <span className="skill-name">JavaScript</span>
-              </a>
-              <a href="javascript:void(0)" className="skill-item">
-                <img className="skill-img" src={TsImg} alt="typescript" />
-                <span className="skill-name">TypeScript</span>
-              </a>
-              <a href="javascript:void(0)" className="skill-item">
-                <img className="skill-img" src={JavaImg} alt="java" />
-                <span className="skill-name">Java</span>
-              </a>
+              {skills.map((skillCat, catIndex) => (
+                <div className="skill-cat-wrapper">
+                  <div key={`skill-cat-${catIndex}`} className="skill-cat-box">
+                    <h1 className="skill-cat-title">{skillCat.name}</h1>
+                    <div className="skill-list">
+                      {skillCat.skills_list.map((skill, skillIndex) => (
+                        <SkillItem
+                          image={skill.image}
+                          name={skill.name}
+                          key={`skill-${catIndex}-${skillIndex}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
