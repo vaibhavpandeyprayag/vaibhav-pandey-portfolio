@@ -1,10 +1,10 @@
-import { useState, type FC } from "react";
+import { type FC } from "react";
 import "./Navbar.css";
 
 interface Props {}
 
 const Navbar: FC<Props> = () => {
-  const [sideBarShow, setSideBarShow] = useState<boolean>(false);
+  // const [sideBarShow, setSideBarShow] = useState<boolean>(false);
   return (
     <nav className={"navbar-container"}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
