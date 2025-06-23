@@ -95,6 +95,15 @@ const HomePage: FC<Props> = () => {
         <div className="hero-section">
           <div>
             <h1
+              className="color-4"
+              style={{
+                fontWeight: "800",
+                fontSize: `${Math.max(30, winInnerWidth / 40)}px`,
+              }}
+            >
+              Hi, I'm
+            </h1>
+            <h1
               className="hero-name translate-up-5"
               style={{
                 fontSize: `${Math.max(40, winInnerWidth / 20)}px`,
@@ -150,7 +159,7 @@ const HomePage: FC<Props> = () => {
           <div className="about-exp-box">
             <div className="experience-box">
               <h1 className="experience-text" style={{}}>
-                2.25
+                2+
               </h1>
               <h1
                 className="experience-title"

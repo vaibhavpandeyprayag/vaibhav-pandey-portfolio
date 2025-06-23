@@ -1,50 +1,87 @@
-import { type FC } from "react";
+import { useState, type FC } from "react";
 import "./Navbar.css";
 
 interface Props {}
 
 const Navbar: FC<Props> = () => {
-  // const [sideBarShow, setSideBarShow] = useState<boolean>(false);
+  const [sideBarShow, setSideBarShow] = useState<boolean>(false);
+  const links = ["Home", "About", "Projects", "Contact"];
   return (
     <nav className={"navbar-container"}>
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <a className="menu-icon" href="javascrpt:void(0)">
-          <span className="menu-icon-bar"></span>
-          <span className="menu-icon-bar"></span>
-          <span className="menu-icon-bar"></span>
-        </a>
-        <h1
-          style={{
-            color: "var(--color-4)",
-            letterSpacing: "2px",
-            fontWeight: "500",
-          }}
-        >
-          PORTFOLIO
-        </h1>
-      </div>
-      <div className="navbar-links">
-        <span className="border-bottom border-color-5-dark">
-          <a className="letter-space-1 translate-up-5" href="#home">
-            Home
-          </a>
-        </span>
-        <span className="border-bottom border-color-5-dark">
-          <a className="letter-space-1 translate-up-5" href="#about">
-            About
-          </a>
-        </span>
-        <span className="border-bottom border-color-5-dark">
-          <a className="letter-space-1 translate-up-5" href="#projects">
-            Projects
-          </a>
-        </span>
-        <span className="border-bottom border-color-5-dark">
-          <a className="letter-space-1 translate-up-5" href="#contact">
-            Contact
-          </a>
-        </span>
-      </div>
+      {sideBarShow == false && (
+        <>
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <a
+              className="menu-icon"
+              href="javascrpt:void(0)"
+              onClick={() => setSideBarShow(true)}
+            >
+              <span className="menu-icon-bar"></span>
+              <span className="menu-icon-bar"></span>
+              <span className="menu-icon-bar"></span>
+            </a>
+            <h1
+              style={{
+                color: "var(--color-4)",
+                letterSpacing: "2px",
+                fontWeight: "500",
+              }}
+            >
+              PORTFOLIO
+            </h1>
+          </div>
+          <div className="navbar-links">
+            {links.map(link => (
+              <span className="border-bottom border-color-5-dark">
+                <a className="letter-space-1 translate-up-5" href={`#${link}`}>
+                  {link}
+                </a>
+              </span>
+            ))}
+          </div>
+        </>
+      )}
+      {sideBarShow == true && (
+        <section className="side-menu">
+          <div
+            style={{
+              display: "flex",
+              width: "100%",
+              justifyContent: "end",
+              alignItems: "center",
+              padding: "1rem",
+            }}
+          >
+            <a
+              className="menu-icon"
+              href="javascrpt:void(0)"
+              onClick={() => setSideBarShow(false)}
+            >
+              <span
+                className="menu-icon-bar"
+                style={{ rotate: "45deg", translate: "0% 100%" }}
+              ></span>
+              <span
+                className="menu-icon-bar"
+                style={{ rotate: "-45deg", translate: "0% -150%" }}
+              ></span>
+            </a>
+          </div>
+          <div className="side-menu-links-list">
+            {links.map(link => (
+              <span style={{ width: "100%" }}>
+                <a
+                  className="letter-space-1 side-menu-link color-4"
+                  style={{ textDecoration: "none" }}
+                  href={`#${link}`}
+                >
+                  {link}
+                </a>
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
     </nav>
   );
 };
